@@ -15,3 +15,11 @@ function processInput(value: string | number | boolean) {
     }
   }
 }
+
+function formatCoordinate([latitude, longitude, locationName]: readonly [
+  number,
+  number,
+  string,
+]): string {
+  return "Location: " + locationName + " (" + latitude + ", " + longitude + ")";
+}
