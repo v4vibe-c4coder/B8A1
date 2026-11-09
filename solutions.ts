@@ -23,3 +23,9 @@ function formatCoordinate([latitude, longitude, locationName]: readonly [
 ]): string {
   return "Location: " + locationName + " (" + latitude + ", " + longitude + ")";
 }
+
+function concatenateArrays<T>(...arrays: T[][]): T[] {
+  return arrays.reduce((result, current) => {
+    return result.concat(current);
+  }, []);
+}
